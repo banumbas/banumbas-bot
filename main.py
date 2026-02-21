@@ -39,6 +39,7 @@ bot = commands.Bot(command_prefix='!', intents=intents)
 
 @bot.event
 async def on_ready():
+    await bot.tree.sync()
     print(f"Бот {bot.user} ({bot.user.id}) запущен и готов к работе.")
 
 
