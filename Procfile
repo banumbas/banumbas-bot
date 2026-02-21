@@ -1,1 +1,1 @@
-web: python ss14_role_bot.py
+web: python main.py
