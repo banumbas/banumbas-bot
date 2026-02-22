@@ -53,6 +53,7 @@ class TempVoiceChannels(commands.Cog):
         category = voice_channel.category
         overwrites = {
             voice_channel.guild.default_role: discord.PermissionOverwrite(read_messages=False),
+            voice_channel.guild.me: discord.PermissionOverwrite(read_messages=True, send_messages=True)
         }
         for member in voice_channel.members:
             overwrites[member] = discord.PermissionOverwrite(read_messages=True, send_messages=True)
